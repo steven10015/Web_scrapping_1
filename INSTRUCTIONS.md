@@ -38,7 +38,7 @@ Save the text of the response as a variable named html_data.
 
 ### Step 4: Parse the html data using beautiful_soup
 
-Create a new intance of BeautifulSoup with the html_data.
+Create a new instance of BeautifulSoup with the html_data. 
 
 Use beautiful soup or the read_html function to extract the table with Tesla Quarterly Revenue and store it into a dataframe named tesla_revenue. The dataframe should have columns Date and Revenue. Make sure the comma and dollar sign is removed from the Revenue column. Inspect the html code to know what parts of the table should be found.
 
