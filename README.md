@@ -6,6 +6,8 @@
 - Develop a code to obtain its content and extract it from a specific table.
 - Use a database to store the data and process it.
 
+<onlyfor saas="false" withBanner="false">
+  
 ## 🌱 How to start this project
 
 Follow the instructions below:
@@ -13,6 +15,8 @@ Follow the instructions below:
 1. Create a new repository by forking the [Git project](https://github.com/4geeksacademy/web-scraping-project-tutorial) or [by clicking here](https://github.com/4geeksacademy/web-scraping-project-tutorial/fork).
 2. Open the newly created repository in Codespace using the [Codespace button extension](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
 3. Once the Codespace VSCode has finished opening, start your project by following the instructions below.
+
+</onlyfor>
 
 ## 🚛 How to deliver this project
 
