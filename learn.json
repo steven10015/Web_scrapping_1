@@ -11,6 +11,7 @@
 	"syntax": "python",
 	"duration" : 2,
 	"autoPlay": false,
+	"template_url": "self",
     	"projectType": "project",
 	"description" : {
 		"us": "Use python and the beautiful soup library to download, scrape, clean and visualize the revenue information from Tesla",
