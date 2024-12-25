@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 class Utils:
+    
     """Utility class."""
 
     def __init__(self):
@@ -15,6 +16,7 @@ class Utils:
         return tables
     
     def process_data(self, df):
+        
         """
         Cleans the DataFrame by:
         - Replacing '$', commas, and spaces with NaN.
@@ -26,13 +28,16 @@ class Utils:
         Returns:
             pd.DataFrame: The cleaned DataFrame.
         """
+        
         df = df.replace({'\$': pd.NA, ',': pd.NA}, regex=True)
         df.dropna(inplace=True, axis=1, how='all')
         df.dropna(inplace=True, axis=0, how='all')
         return df
 
     def convert_table_to_dataframe(self, table):
+        
         """Convert a BeautifulSoup table to a pandas DataFrame."""
+        
         rows = table.find_all('tr')
         data = []
         for row in rows:
@@ -42,3 +47,4 @@ class Utils:
     
         df = pd.DataFrame(data,  columns=["Concept", "Figure"])
         return self.process_data(df)
+

@@ -1,11 +1,14 @@
 import sys
 from service.tesla_revenue_service import TeslaRevenueService
-
+from config.database import Database
 
 
 def main():
     
     """Main function."""
+
+    config = Database()
+    config.create_table()
 
     TeslaRevenueService().get_tesla_revenue()
 
