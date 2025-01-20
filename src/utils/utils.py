@@ -15,6 +15,13 @@ class Utils:
         tables = soup.find_all('table')
         return tables
     
+    def find_table(self, html):
+        """ Find the table. """
+        soup = BeautifulSoup(html.text, 'html.parser')
+        table = soup.find("table")
+        print(table)
+        return table
+    
     def process_data(self, df):
         
         """
@@ -47,4 +54,17 @@ class Utils:
     
         df = pd.DataFrame(data,  columns=["Concept", "Figure"])
         return self.process_data(df)
+    
+
+    def convert_revenue_data_table(self, table):
+        rows = table.find_all("tr")
+        data = []
+        for row in rows[1:]:
+            cols = row.find_all("td")
+            date = cols[0].text.strip()
+            revenue = cols[1].text.strip()
+            data.append([date, revenue])
+        df = pd.DataFrame(data, columns=["Date", "Revenue"])
+        df['Revenue'] = df['Revenue'].str.replace('$', '').str.replace(' B', '').astype(float)
+        return df
 

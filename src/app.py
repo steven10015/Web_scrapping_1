@@ -10,7 +10,7 @@ def main():
     config = Database()
     config.create_table()
 
-    TeslaRevenueService().get_tesla_revenue()
+    TeslaRevenueService().get_data_tesla()
 
 
 if __name__ == "__main__":
