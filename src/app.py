@@ -1,3 +1,7 @@
+# John fredy beltran cuellar
+# Date:08/31/2025
+# Goal: realizar el proyecto web scraping
+
 import pandas  as pd
 import matplotlib.pyplot as plt
 import requests
